@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html ng-app="maps">
+	<head>
+		<meta name="viewport" content="initial-scale=1.0">
+   		<meta charset="utf-8">
+		<link rel="stylesheet" type="text/css" href="addons/bootstrap/dist/css/bootstrap.min.css" />
+		<link rel="stylesheet" href="app/css/map.css">
+	</head>
+	<body>
+		<script type="text/javascript" src="addons/jquery.min.js"></script>
+		<script type="text/javascript" src="addons/angular.min.js"></script>
+		<script type="text/javascript" src="app/js/app.js"></script>
+		<script type="text/javascript" src="app/js/funciones.js"></script>
+		
+		<div class="panel panel-default">
+			<div class="panel-heading">
+				<button onclick="funciones.cargar_marcadores();" class="btn btn-success">Ver propiedades</button>
+			</div>
+		</div>
+				<div id="map">
+			    	<!-- En esta div se carga el mapa -->
+			    </div>
+		<script>
+			function cargar_mapa() {
+				var map = new google.maps.Map(document.getElementById('map'), {
+					center : {
+						lat : 20.6739383,
+						lng : -103.4054539
+					},
+					scrollwheel : false,
+					zoom : 12
+				});
+			}
+		</script>
+    
+    <!-- Carga el mapa -->
+		<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBQWW7-ArDuIiGdFuN7ZA8s34OTYK2NVUs&callback=cargar_mapa"
+    async defer></script>
+    <script>
+    // Carga los marcadores
+    	
+    </script>
+	</body>
+</html>
